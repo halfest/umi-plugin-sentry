@@ -1,6 +1,6 @@
 {
-  "name": "umi-plugin-sentry",
-  "version": "0.1.1",
+  "name": "@halfest/umi-plugin-sentry",
+  "version": "0.1.4",
   "description": "umi plugin for sentry",
   "main": "lib/index.js",
   "scripts": {
