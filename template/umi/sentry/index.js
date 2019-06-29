@@ -11,9 +11,20 @@ const beforeSend = (event, hint) => {
 
 Sentry.init({
   dsn: options.dsn,
+  environment: options.environment,
+  release: options.release,
   ...(
     !options.log ? {} : { beforeSend }
   ),
+});
+
+Sentry.configureScope((scope) => {
+  // scope.setTag("page_locale", "de-at");
+  if (options.tags) {
+    Object.keys(options.tags).forEach(key => {
+      scope.setTag(key, options.tags[key]);
+    });
+  }
 });
 
 export default class SentryBoundary extends Component {

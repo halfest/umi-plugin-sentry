@@ -30,3 +30,4 @@ export default {
 |------------------------------------|----------------------------------|----------------------------------------------|
 | dsn                                | string (required in production)  | `process.env.SENTRY_DSN`                     |
 | log (log to console before send)   | boolean (optional)               | `NODE_ENV === 'development' ? true : false`  |
+| environment                        | string (optional)                | ``                                           |
